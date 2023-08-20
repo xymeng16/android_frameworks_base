@@ -1081,7 +1081,7 @@
              return;
          }
  
-         // updateViewDimAmount(true);
+         updateViewDimAmount(true);
          
          if (!mOverlay.matchesRequestId(requestId)) {
              Log.w(TAG, "Mismatched fingerDown: " + requestId
@@ -1125,7 +1125,6 @@
          final UdfpsView view = mOverlay.getOverlayView();
          if (view != null && isOptical()) {
              view.configureDisplay(() -> {
-                 updateViewDimAmount(true);
                  if (mAlternateTouchProvider != null) {
                      mBiometricExecutor.execute(() -> {
                          mAlternateTouchProvider.onUiReady();
